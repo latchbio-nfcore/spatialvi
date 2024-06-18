@@ -1,15 +1,10 @@
-
-from latch.types.metadata import (
-    NextflowMetadata,
-    LatchAuthor,
-    NextflowRuntimeResources
-)
 from latch.types.directory import LatchDir
+from latch.types.metadata import LatchAuthor, NextflowMetadata, NextflowRuntimeResources
 
 from .parameters import generated_parameters
 
 NextflowMetadata(
-    display_name='nf-core/spatialvi',
+    display_name="nf-core/spatialvi",
     author=LatchAuthor(
         name="Your Name",
     ),
