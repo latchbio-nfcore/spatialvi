@@ -40,6 +40,12 @@
                     "type": "string",
                     "description": "MultiQC report title. Printed as page header, used for filename if not otherwise specified.",
                     "fa_icon": "fas fa-file-signature"
+                },
+                "visium_hd": {
+                    "type": "boolean",
+                    "description": "Boolean if Visium data is Visium HD",
+                    "fa_icon": "fas fa-hashtag",
+                    "default": false
                 }
             }
         },
@@ -118,20 +124,20 @@
                 },
                 "qc_mito_threshold": {
                     "type": "number",
-                    "default": 20,
+                    "default": 20.0,
                     "description": "The maximum proportion of mitochondrial content that a spot is allowed to have to pass the filtering.",
                     "help_text": "If you do not wish to filter based on mitochondrial content, set this parameter to `100`.",
                     "fa_icon": "fas fa-hashtag"
                 },
                 "qc_ribo_threshold": {
                     "type": "number",
-                    "default": 0,
+                    "default": 0.0,
                     "description": "The minimum proportion of ribosomal content that a spot is needs to have to pass the filtering (no filtering is done by default).",
                     "fa_icon": "fas fa-hashtag"
                 },
                 "qc_hb_threshold": {
                     "type": "number",
-                    "default": 100,
+                    "default": 100.0,
                     "description": "The maximum proportion of haemoglobin content that a spot is allowed to have to pass the filtering (no filtering is done by default).",
                     "fa_icon": "fas fa-hashtag"
                 },
@@ -143,7 +149,7 @@
                 },
                 "cluster_resolution": {
                     "type": "number",
-                    "default": 1,
+                    "default": 1.0,
                     "description": "The resolution for the clustering of the spots.",
                     "help_text": "The resolution controls the coarseness of the clustering, where a higher resolution leads to more clusters.",
                     "fa_icon": "fas fa-circle-nodes"

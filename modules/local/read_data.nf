@@ -3,6 +3,8 @@
 //
 process READ_DATA {
 
+    errorStrategy { params.visium_hd ? 'ignore' : 'terminate' }
+
     tag "${meta.id}"
     label 'process_low'
 
