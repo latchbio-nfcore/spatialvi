@@ -140,7 +140,7 @@ def nextflow_runtime(pvc_name: str, input: typing.List[Sample], outdir: typing_e
                 *get_flag('cluster_resolution', cluster_resolution),
                 *get_flag('svg_autocorr_method', svg_autocorr_method),
                 *get_flag('n_top_svgs', n_top_svgs),
-                *get_flag('multiqc_methods_description', multiqc_methods_description)
+                *get_flag('multiqc_methods_description', multiqc_methods_description),
                 *get_flag('visium_hd', visium_hd)
         ]
 

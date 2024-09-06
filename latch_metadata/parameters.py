@@ -18,7 +18,6 @@ flow: typing.List[FlowBase] = [
         "Input / Output",
         Params(
             "input",
-            "visium_hd",
             "outdir",
         ),
     ),
