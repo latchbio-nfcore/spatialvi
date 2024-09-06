@@ -1,3 +1,4 @@
+from pathlib import Path
 
 from latch.types.directory import LatchDir
 from latch.types.metadata import (LatchAuthor, NextflowMetadata,
@@ -19,4 +20,5 @@ NextflowMetadata(
         storage_expiration_hours=7,
     ),
     log_dir=LatchDir("latch:///your_log_dir"),
+    about_page_path=Path("docs/README.md"),
 )
