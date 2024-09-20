@@ -8,6 +8,8 @@ include { QUARTONOTEBOOK as CLUSTERING               } from '../../modules/nf-co
 
 workflow DOWNSTREAM {
 
+    // errorStrategy { params.visium_hd ? 'ignore' : 'terminate' }
+
     take:
     sdata_raw
 

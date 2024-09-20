@@ -19,6 +19,6 @@ NextflowMetadata(
         storage_gib=100,
         storage_expiration_hours=7,
     ),
-    log_dir=LatchDir("latch:///your_log_dir"),
+    log_dir=LatchDir("latch:///spatialvi_logs"),
     about_page_path=Path("docs/README.md"),
 )

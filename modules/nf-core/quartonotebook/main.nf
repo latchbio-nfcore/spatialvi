@@ -3,6 +3,7 @@ include { dumpParamsYaml; indentCodeBlock } from "./parametrize"
 process QUARTONOTEBOOK {
     tag "$meta.id"
     label 'process_low'
+    errorStrategy { params.visium_hd ? 'ignore' : 'terminate' }
 
     container "docker.io/erikfas/spatialvi"
 
