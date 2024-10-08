@@ -39,7 +39,7 @@ def initialize() -> str:
         "http://nf-dispatcher-service.flyte.svc.cluster.local/provision-storage",
         headers=headers,
         json={
-            "v2"
+            "version": 2,
         },
     )
     resp.raise_for_status()
