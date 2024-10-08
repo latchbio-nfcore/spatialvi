@@ -12,4 +12,4 @@ reports
 nf-test
 .nf-test*
 test-datasets
-# .latch/.logs
+.latch/.logs

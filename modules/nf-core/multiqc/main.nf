@@ -1,6 +1,6 @@
 process MULTIQC {
     label 'process_single'
-    errorStrategy { params.visium_hd ? 'ignore' : 'terminate' }
+    // errorStrategy { params.visium_hd ? 'ignore' : 'terminate' }
 
     conda "${moduleDir}/environment.yml"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
