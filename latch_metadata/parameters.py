@@ -116,14 +116,14 @@ generated_parameters = {
         description='Location of Space Ranger reference directory. May be packed as `tar.gz` file.',
     ),
     'spaceranger_save_reference': NextflowParameter(
-        type=typing.Optional[bool],
-        default=None,
+        type=bool,
+        default=False,
         display_name='spaceranger_save_reference',
         description='Save the extracted tar archive of the Space Ranger reference.',
     ),
     'save_untar_output': NextflowParameter(
-        type=typing.Optional[bool],
-        default=None,
+        type=bool,
+        default=False,
         display_name='save_untar_output',
         description='Save extracted tar archives of input data.',
     ),

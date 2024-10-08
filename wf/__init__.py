@@ -26,9 +26,11 @@ from latch_cli.utils import urljoins
 
 from wf.entrypoint import Sample, initialize, nextflow_runtime
 
+meta = Path("latch_metadata") / "__init__.py"
+import_module_by_path(meta)
 
 @workflow(metadata._nextflow_metadata)
-def nf_nf_core_spatialvi(input: typing.List[Sample], outdir: typing_extensions.Annotated[LatchDir, FlyteAnnotation({'output': True})], email: typing.Optional[str], multiqc_title: typing.Optional[str], spaceranger_probeset: typing.Optional[LatchFile], spaceranger_save_reference: typing.Optional[bool], save_untar_output: typing.Optional[bool], multiqc_methods_description: typing.Optional[str], spaceranger_reference: typing.Optional[str] = 'https://cf.10xgenomics.com/supp/spatial-exp/refdata-gex-GRCh38-2020-A.tar.gz', qc_min_counts: typing.Optional[int] = 500, qc_min_genes: typing.Optional[int] = 250, qc_min_spots: typing.Optional[int] = 1, qc_mito_threshold: typing.Optional[float] = 20.0, qc_ribo_threshold: typing.Optional[float] = 0.0, qc_hb_threshold: typing.Optional[float] = 100.0, cluster_n_hvgs: typing.Optional[int] = 2000, cluster_resolution: typing.Optional[float] = 1.0, svg_autocorr_method: typing.Optional[str] = 'moran', visium_hd: bool = False, n_top_svgs: typing.Optional[int] = 14) -> None:
+def nf_nf_core_spatialvi(input: typing.List[Sample], outdir: typing_extensions.Annotated[LatchDir, FlyteAnnotation({'output': True})], email: typing.Optional[str], multiqc_title: typing.Optional[str], spaceranger_probeset: typing.Optional[LatchFile], spaceranger_save_reference: bool, save_untar_output: bool, multiqc_methods_description: typing.Optional[str], spaceranger_reference: typing.Optional[str] = 'https://cf.10xgenomics.com/supp/spatial-exp/refdata-gex-GRCh38-2020-A.tar.gz', qc_min_counts: typing.Optional[int] = 500, qc_min_genes: typing.Optional[int] = 250, qc_min_spots: typing.Optional[int] = 1, qc_mito_threshold: typing.Optional[float] = 20.0, qc_ribo_threshold: typing.Optional[float] = 0.0, qc_hb_threshold: typing.Optional[float] = 100.0, cluster_n_hvgs: typing.Optional[int] = 2000, cluster_resolution: typing.Optional[float] = 1.0, svg_autocorr_method: typing.Optional[str] = 'moran', visium_hd: bool = False, n_top_svgs: typing.Optional[int] = 14) -> None:
     """
     nf-core/spatialvi
 
